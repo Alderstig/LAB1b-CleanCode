@@ -1,6 +1,10 @@
-﻿using System;
-using Labb1b_Terminal;
+﻿using Labb1b_Terminal;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Labb1b_Test
 {
@@ -10,11 +14,10 @@ namespace Labb1b_Test
         [Test]
         public void ReadFile_ReadLinesFromLocalTxtFile_ReturnsTrueIfNotNull()
         {
-            FileHandler fileHandler = new FileHandler();
+            FileHandler fileHandler = new();
             var textArr = fileHandler.ReadFile();
 
             Assert.NotNull(textArr);
         }
     }
 }
-

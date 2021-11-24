@@ -7,7 +7,7 @@ namespace Labb1b_Terminal
     {
         public List<string> ReverseText(string[] textArr)
         {
-            List<string> textArrReversed = new List<string>();
+            List<string> textArrReversed = new();
 
             foreach (var text in textArr)
             {

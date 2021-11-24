@@ -9,7 +9,8 @@ namespace Labb1b_Terminal
         {
             try
             {
-                string[] textArr = File.ReadAllLines(@"/Users/philipalderstig/Projects/Labb1b-Terminal/indata.txt");
+                //Change relative path so that it matches your repo
+                string[] textArr = File.ReadAllLines(@"C:\Users\alder\source\repos\LAB1b-CleanCode\indata.txt");
 
                 if (textArr.Length == 0)
                 {

@@ -1,7 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Labb1b_Terminal;
+﻿using Labb1b_Terminal;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Labb1b_Test
 {
@@ -13,17 +16,13 @@ namespace Labb1b_Test
         [Test]
         public void ReverseText_ReverseLinesFromTextArray_ReturnsTrueIfReversedCorrectly()
         {
-            FileHandler fileHandler = new FileHandler();
+            FileHandler fileHandler = new();
             var textArr = fileHandler.ReadFile();
 
-            TextHandler textHandler = new TextHandler();
+            TextHandler textHandler = new();
             var reversedTextList = textHandler.ReverseText(textArr);
 
-            for (int i = 0; i < reversedTextList.Count; i++)
-            {
-                Assert.That(reversedTextList[i], Is.EqualTo(_correctlyReversedList[i]));
-            }
+            CollectionAssert.AreEqual(reversedTextList, _correctlyReversedList);
         }
     }
 }
-
