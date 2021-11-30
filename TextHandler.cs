@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Labb1b_Terminal
 {
-    public class TextHandler
+    public class TextHandler : ITextHandler
     {
         public List<string> ReverseText(string[] textArr)
         {

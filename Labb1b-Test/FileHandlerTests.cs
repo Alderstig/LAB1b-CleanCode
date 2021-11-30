@@ -14,8 +14,8 @@ namespace Labb1b_Test
         [Test]
         public void ReadFile_ReadLinesFromLocalTxtFile_ReturnsTrueIfNotNull()
         {
-            FileHandler fileHandler = new();
-            var textArr = fileHandler.ReadFile();
+            IDataReader dataReader = new FileHandler();
+            var textArr = dataReader.ReadFile();
 
             Assert.NotNull(textArr);
         }

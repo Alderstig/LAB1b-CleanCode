@@ -16,10 +16,10 @@ namespace Labb1b_Test
         [Test]
         public void ReverseText_ReverseLinesFromTextArray_ReturnsTrueIfReversedCorrectly()
         {
-            FileHandler fileHandler = new();
+            IDataReader fileHandler = new FileHandler();
             var textArr = fileHandler.ReadFile();
 
-            TextHandler textHandler = new();
+            ITextHandler textHandler = new TextHandler();
             var reversedTextList = textHandler.ReverseText(textArr);
 
             CollectionAssert.AreEqual(reversedTextList, _correctlyReversedList);

@@ -3,14 +3,21 @@ using System.IO;
 
 namespace Labb1b_Terminal
 {
-    public class FileHandler
+    public class FileHandler : IDataReader
     {
+        public string[] GetStrings()
+        { 
+            //Change path so that it matches your repo
+            string[] textArr = File.ReadAllLines(@"C:\Users\alder\Source\Repos\LAB1b-CleanCode\indata.txt");
+
+            return textArr;
+        }
+
         public string[] ReadFile()
         {
             try
             {
-                //Change relative path so that it matches your repo
-                string[] textArr = File.ReadAllLines(@"C:\Users\alder\source\repos\LAB1b-CleanCode\indata.txt");
+                string[] textArr = GetStrings();
 
                 if (textArr.Length == 0)
                 {

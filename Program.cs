@@ -6,9 +6,9 @@ namespace Labb1b_Terminal
     {
         static void Main(string[] args)
         {
-            FileHandler fileHandler = new();
+            IDataReader dataReader = new FileHandler();
 
-            string[] textArr = fileHandler.ReadFile();
+            string[] textArr = dataReader.ReadFile();
 
             foreach (var item in textArr)
             {
@@ -17,7 +17,7 @@ namespace Labb1b_Terminal
 
             Console.WriteLine("----------------------------------------");
 
-            TextHandler textHandler = new();
+            ITextHandler textHandler = new TextHandler();
 
             var listReversed = textHandler.ReverseText(textArr);
 
