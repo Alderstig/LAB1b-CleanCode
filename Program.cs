@@ -17,7 +17,7 @@ namespace Labb1b_Terminal
 
             Console.WriteLine("----------------------------------------");
 
-            ITextHandler textHandler = new TextHandler();
+            TextHandler textHandler = new TextHandler();
 
             var listReversed = textHandler.ReverseText(textArr);
 
